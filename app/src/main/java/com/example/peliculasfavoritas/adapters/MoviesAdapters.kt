@@ -40,19 +40,22 @@ class MoviesAdapters: RecyclerView.Adapter<MoviesAdapters.MoviesViewHolder>() {
     inner class MoviesViewHolder(private var bindingItem: MoviesItemBinding)
         : RecyclerView.ViewHolder(bindingItem.root){
 
-        val imagen =  bindingItem.ImgenPortada
+        val imagen = bindingItem.imgPortada // Puedes acceder directamente a 'imgPortada' desde 'bindingItem'
 
-        fun bind(movie: Movies){
+        fun bind(movie: Movies) {
 
-            Glide.with(bindingItem.listMovies)
-                .load(movie.UrlImagen)
-                .into(imagen)
+            // Utiliza Glide para cargar la imagen en el ImageView 'imagen' dentro de 'bindingItem'
+            Glide.with(bindingItem.root.context) // Accede al contexto directamente desde 'root'
+                .load(movie.UrlImagen) // Utiliza 'imageUrl' para acceder a la URL de la imagen
+                .into(imagen) // Puedes usar directamente 'imagen' aquí
 
-            with(movie){
-                bindingItem.tituloOriginal.text = movie.titulo
-                bindingItem.annioMovies.text = movie.annio.toString()
+            // Establece el título y el año de la película en los TextView correspondientes dentro de 'bindingItem'
+            with(bindingItem) { // Accede directamente a 'bindingItem' usando 'with'
+                tituloOriginal.text = movie.titulo // Cambiado 'movies.titulo' a 'movie.title' para acceder a la propiedad correctamente
+                annioMovies.text = movie.anno.toString() // Cambiado 'movies.annio' a 'movie.year' para acceder a la propiedad correctamente
             }
         }
+
     }
 
 

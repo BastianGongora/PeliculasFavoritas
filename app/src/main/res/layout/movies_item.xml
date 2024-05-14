@@ -13,11 +13,12 @@
         android:layout_gravity="center">
 
         <ImageView
-            android:id="@+id/ImgenPortada"
+            android:id="@+id/img_Portada"
             android:layout_width="150dp"
             android:layout_height="221dp"
             android:src="@drawable/img" />
         <LinearLayout
+
             android:id="@+id/layoutDescripcion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,6 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dragon Ball Super Broly"
+                    android:textColor="@color/black"
                     android:layout_marginStart="10dp"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -52,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="Año Publicación: "
+                    android:text="Año de Lanzamiento: "
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -62,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:text="2020"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -78,11 +81,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Demografía : Shonen"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
                     android:layout_marginStart="10dp"
                     android:textSize="12sp"
                     />
+                <ImageButton
+                    android:id="@+id/btninfo
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="38dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/info" />
+
 
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
